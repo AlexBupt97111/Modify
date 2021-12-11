@@ -1,0 +1,24 @@
+def insert_sort(A):# use insert from right to left! 
+    N = len(A) 
+    print(A) #manual part
+    
+    for top in range (1, N):#insert top from elem with index 1 
+        k=top # index of element which insert into 
+        while k > 0 and A[k-1]> A[k]: 
+            A[k], A[k-1] = A[k-1], A[k]#left sort 
+
+            print(k, ' - index of insert element (higher list)') #manual part!! 
+            
+            k -= 1  
+            
+            print(k, ' - index which change ( higher list) by insert k') #manual part!! 
+            print('---') #manual part!! 
+            print(A, '- changed') #manual part!!         
+
+A = [4,2,5,1,3] 
+
+A_sorted = [1,2,3,4,5] 
+
+insert_sort(A)
+
+print("OK" if A == A_sorted else "Fail")
