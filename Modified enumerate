@@ -1,0 +1,13 @@
+def enumer(S):
+  if isinstance (S,dict):
+    print("Yes")
+    num = 0
+    while num < len(S): 
+        for k,v in S.items():
+            yield(num, k, v)
+            num+=1     
+  else:
+      print('No', list(enumerate(S)))           
+S = {2:5,3:7,4:9}
+for elem in enumer(S):
+    print(elem)
