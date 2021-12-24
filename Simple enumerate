@@ -1,0 +1,9 @@
+def enum(A):
+    if isinstance(A,dict):
+        for items, (keys, values) in enumerate(A.items()):
+            print(items,(keys,values))
+    else:
+      print('No',enumerate(A))
+
+A = {1:2,3:6, 4:8}
+enum(A)
